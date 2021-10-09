@@ -190,13 +190,10 @@ return require('packer').startup(function()
         "stsewd/spotify.nvim"
     }
 
-    -- Bufferline
+    -- Barbar
     use {
-      "akinsho/bufferline.nvim",
-      after = "nvim-web-devicons",
-      config = function()
-          require("plugin.config.bufferline")
-      end
+      'romgrk/barbar.nvim',
+      after = "nvim-web-devicons"
    }
 
    -- nvim-tree

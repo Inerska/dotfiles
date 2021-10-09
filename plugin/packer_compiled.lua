@@ -75,16 +75,15 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/LuaSnip",
     wants = { "friendly-snippets" }
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
+  },
   ["better-escape.vim"] = {
     config = { "\27LJ\2\2;\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0 plugin.config.better_escape\frequire\0" },
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/better-escape.vim"
-  },
-  ["bufferline.nvim"] = {
-    config = { "\27LJ\2\0028\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\29plugin.config.bufferline\frequire\0" },
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
