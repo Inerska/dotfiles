@@ -137,21 +137,29 @@ return require('packer').startup(function()
         end,
     })
     use({ "rafamadriz/friendly-snippets" })
-	use({ "saadparwaiz1/cmp_luasnip" })
-	use({ "hrsh7th/cmp-nvim-lua" })
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-buffer" })
-	use({ "hrsh7th/cmp-path" })
-
     use {
         "windwp/nvim-autopairs",
     }
+
+	use({ "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" })
+	use({ "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" })
+	use { 
+                "hrsh7th/cmp-nvim-lsp",
+                after = {
+                    "nvim-cmp",
+                    "nvim-lspconfig"
+                }   
+            }
+	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
+	use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
 
 
     -- CMP
     use {
         'hrsh7th/nvim-cmp',
-        requires = "onsails/lspkind-nvim",
+        requires = {
+            "onsails/lspkind-nvim",
+       },
         event = "InsertEnter",
         config = function()
             require('plugin.config.cmp')

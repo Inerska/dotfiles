@@ -81,24 +81,49 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/better-escape.vim"
   },
   ["cmp-buffer"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+    after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp/after/plugin/cmp_nvim_lsp.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+    after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua"
   },
   ["cmp-path"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/cmp-path"
+    after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp-path"
   },
   cmp_luasnip = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+    after_files = { "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
     config = { "\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.dashboard\frequire\0" },
@@ -133,6 +158,7 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-cmp"] = {
+    after = { "cmp-nvim-lsp", "cmp_luasnip", "cmp-buffer", "cmp-nvim-lua", "cmp-path" },
     config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.cmp\frequire\0" },
     loaded = false,
     needs_bufread = false,
@@ -143,7 +169,7 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
-    after = { "lsp_signature.nvim" },
+    after = { "cmp-nvim-lsp", "lsp_signature.nvim" },
     loaded = true,
     only_config = true
   },
