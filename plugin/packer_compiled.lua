@@ -164,7 +164,7 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-nvim-lsp", "cmp_luasnip", "cmp-buffer", "cmp-nvim-lua", "cmp-path" },
+    after = { "cmp-nvim-lsp", "cmp_luasnip", "cmp-nvim-lua", "cmp-path", "cmp-buffer" },
     config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.cmp\frequire\0" },
     loaded = false,
     needs_bufread = false,
@@ -178,6 +178,13 @@ _G.packer_plugins = {
     after = { "cmp-nvim-lsp", "lsp_signature.nvim" },
     loaded = true,
     only_config = true
+  },
+  ["nvim-tree.lua"] = {
+    commands = { "NvimTreeToggle", "NvimTreeFocus" },
+    config = { "\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.nvim_tree\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -243,6 +250,13 @@ vim.cmd [[ packadd lsp_signature.nvim ]]
 try_loadstring("\27LJ\2\2…\2\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\17handler_opts\1\0\1\vborder\vsingle\1\0\f\tbind\2\ffix_pos\2\16hint_prefix\tïŸ» \20floating_window\2\14doc_lines\3\2\14max_width\3x\16hint_enable\2\fpadding\5\vzindex\3È\1\15max_height\3\22\17hi_parameter\vSearch\16hint_scheme\vString\nsetup\18lsp_signature\frequire\0", "config", "lsp_signature.nvim")
 
 time([[Sequenced loading]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeFocus lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeFocus", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

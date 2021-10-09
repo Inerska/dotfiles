@@ -195,12 +195,23 @@ return require('packer').startup(function()
       "akinsho/bufferline.nvim",
       after = "nvim-web-devicons",
       config = function()
-          require"plugin.config.bufferline"
+          require("plugin.config.bufferline")
+      end
+   }
+
+   -- nvim-tree
+   use {
+      "kyazdani42/nvim-tree.lua",
+      cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+      config = function()
+          require("plugin.config.nvim_tree")
       end
    }
 
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gh", "<cmd>Spotify prev<CR>", { noremap = true, silent = true })
+
+    vim.api.nvim_set_keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 end)
