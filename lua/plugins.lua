@@ -45,7 +45,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     execute('!git clone https://github.com/wbthomason/packer.nvim'..install_path)
     execute '!packadd packer.nvim'
 end
-require('lualine').setup()
 vim.g.mapleader = "<Space>"
 vim.cmd 'set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab'
 vim.cmd 'set termguicolors'
@@ -172,11 +171,12 @@ return require('packer').startup(function()
         "nvim-treesitter/nvim-treesitter"
     }
 
-    -- LuaLine
+    -- Feline
     use {
-        'hoob3rt/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true},
-        options = {theme = 'nightfox'}
+        'famiu/feline.nvim',
+        config = function()
+            require("plugin.config.feline")
+        end
     }
 
     -- Trouble

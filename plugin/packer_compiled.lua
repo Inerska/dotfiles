@@ -136,6 +136,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
+  ["feline.nvim"] = {
+    config = { "\27LJ\2\0024\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\25plugin.config.feline\frequire\0" },
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/feline.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/friendly-snippets"
@@ -150,10 +155,6 @@ _G.packer_plugins = {
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
-  },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -226,10 +227,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for dashboard-nvim]], true)
 try_loadstring("\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.dashboard\frequire\0", "config", "dashboard-nvim")
 time([[Config for dashboard-nvim]], false)
--- Config for: better-escape.vim
-time([[Config for better-escape.vim]], true)
-try_loadstring("\27LJ\2\2;\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0 plugin.config.better_escape\frequire\0", "config", "better-escape.vim")
-time([[Config for better-escape.vim]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+try_loadstring("\27LJ\2\0024\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\25plugin.config.feline\frequire\0", "config", "feline.nvim")
+time([[Config for feline.nvim]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.lsp\frequire\0", "config", "nvim-lspconfig")
@@ -242,6 +243,10 @@ time([[Config for which-key.nvim]], false)
 time([[Config for LuaSnip]], true)
 try_loadstring("\27LJ\2\0025\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\26plugin.config.luasnip\frequire\0", "config", "LuaSnip")
 time([[Config for LuaSnip]], false)
+-- Config for: better-escape.vim
+time([[Config for better-escape.vim]], true)
+try_loadstring("\27LJ\2\2;\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0 plugin.config.better_escape\frequire\0", "config", "better-escape.vim")
+time([[Config for better-escape.vim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd lsp_signature.nvim ]]

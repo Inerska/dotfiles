@@ -1,4 +1,9 @@
-require('bufferline').setup {
+local present, bufferline = pcall(require, "bufferline")
+if not present then
+   return
+end
+
+bufferline.setup {
   options = {
     numbers = "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     --- @deprecated, please specify numbers as a function to customize the styling
