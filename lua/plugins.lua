@@ -190,6 +190,15 @@ return require('packer').startup(function()
         "stsewd/spotify.nvim"
     }
 
+    -- Bufferline
+    use {
+      "akinsho/bufferline.nvim",
+      after = "nvim-web-devicons",
+      config = function()
+          require"plugin.config.bufferline"
+      end
+   }
+
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gh", "<cmd>Spotify prev<CR>", { noremap = true, silent = true })

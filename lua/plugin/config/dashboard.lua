@@ -24,3 +24,4 @@ g.dashboard_custom_header = {
     " ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣽⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ",
 }
 g.dashboard_default_executive = "telescope"
+g.dashboard_custom_footer = {"Alexis C. GRIDEL"}
