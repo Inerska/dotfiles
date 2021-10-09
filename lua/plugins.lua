@@ -88,6 +88,7 @@ return require('packer').startup(function()
     use {
         'neovim/nvim-lspconfig',
         requires = "williamboman/nvim-lsp-installer",
+        before = "cmp-nvim-lsp",
         config = function()
             require('plugin.config.lsp')
         end
@@ -184,5 +185,13 @@ return require('packer').startup(function()
         requires = "kyazdani42/nvim-web-devicons"
     }
 
+    -- Spotify
+    use {
+        "stsewd/spotify.nvim"
+    }
+
+    vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "gh", "<cmd>Spotify prev<CR>", { noremap = true, silent = true })
 
 end)

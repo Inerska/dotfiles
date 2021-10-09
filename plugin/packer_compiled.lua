@@ -189,6 +189,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
+  ["spotify.nvim"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/spotify.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/telescope.nvim"
