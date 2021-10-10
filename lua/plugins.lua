@@ -55,17 +55,17 @@ return require('packer').startup(function()
     use "wbthomason/packer.nvim"
 
     use 'EdenEast/nightfox.nvim'
-    -- Telescope
+    --[[Telescope
     use 
     {
-        "nvim-lua/plenary.nvim",
         "nvim-telescope/telescope.nvim",
 
         require = {
-            "nvim-telescope/telescope-media-files.nvim",
-            "nvim-telescope/telescope-fzf-native.nvim"
+            --"nvim-telescope/telescope-fzf-native.nvim",
+            "nvim-lua/plenary.nvim"
+            --'nvim-lua/popup.nvim'
         }
-    }
+    }]]
 
     -- Dashboard
     use 
