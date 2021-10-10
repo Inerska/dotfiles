@@ -59,7 +59,12 @@ return require('packer').startup(function()
     use 
     {
         "nvim-lua/plenary.nvim",
-        "nvim-telescope/telescope.nvim"
+        "nvim-telescope/telescope.nvim",
+
+        require = {
+            "nvim-telescope/telescope-media-files.nvim",
+            "nvim-telescope/telescope-fzf-native.nvim"
+        }
     }
 
     -- Dashboard
@@ -215,5 +220,7 @@ return require('packer').startup(function()
     vim.api.nvim_set_keymap("n", "gh", "<cmd>Spotify prev<CR>", { noremap = true, silent = true })
 
     vim.api.nvim_set_keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true })
+
+    vim.api.nvim_set_keymap("n", "<Tab>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
 
 end)

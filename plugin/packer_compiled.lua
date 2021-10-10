@@ -214,6 +214,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
+  ["vim-closetag"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/vim-closetag"
+  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
