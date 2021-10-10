@@ -55,17 +55,19 @@ return require('packer').startup(function()
     use "wbthomason/packer.nvim"
 
     use 'EdenEast/nightfox.nvim'
-    --[[Telescope
+    --Telescope
     use 
     {
         "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
 
         require = {
-            --"nvim-telescope/telescope-fzf-native.nvim",
-            "nvim-lua/plenary.nvim"
-            --'nvim-lua/popup.nvim'
+            "nvim-telescope/telescope-fzf-native.nvim",
+            "nvim-telescope/telescope-media-files.nvim",
+            "nvim-telescope/telescope-fzf-native.nvim",
+            'nvim-lua/popup.nvim'
         }
-    }]]
+    }
 
     -- Dashboard
     use 
@@ -146,17 +148,17 @@ return require('packer').startup(function()
         "windwp/nvim-autopairs",
     }
 
-	use({ "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" })
-	use({ "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" })
-	use { 
-                "hrsh7th/cmp-nvim-lsp",
-                after = {
-                    "nvim-cmp",
-                    "nvim-lspconfig"
-                }   
-            }
-	use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
-	use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
+    use({ "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" })
+    use({ "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" })
+    use { 
+        "hrsh7th/cmp-nvim-lsp",
+        after = {
+            "nvim-cmp",
+            "nvim-lspconfig"
+        }   
+    }
+    use({ "hrsh7th/cmp-buffer", after = "nvim-cmp" })
+    use({ "hrsh7th/cmp-path", after = "nvim-cmp" })
 
 
     -- CMP
@@ -164,7 +166,7 @@ return require('packer').startup(function()
         'hrsh7th/nvim-cmp',
         requires = {
             "onsails/lspkind-nvim",
-       },
+        },
         event = "InsertEnter",
         config = function()
             require('plugin.config.cmp')
@@ -197,23 +199,23 @@ return require('packer').startup(function()
 
     -- Barbar
     use {
-      'romgrk/barbar.nvim',
-      after = "nvim-web-devicons"
-   }
+        'romgrk/barbar.nvim',
+        after = "nvim-web-devicons"
+    }
 
-   -- nvim-tree
-   use {
-      "kyazdani42/nvim-tree.lua",
-      cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-      config = function()
-          require("plugin.config.nvim_tree")
-      end
-   }
+    -- nvim-tree
+    use {
+        "kyazdani42/nvim-tree.lua",
+        cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+        config = function()
+            require("plugin.config.nvim_tree")
+        end
+    }
 
-   -- Auto close tag
-   use {
-       'alvan/vim-closetag'
-   }
+    -- Auto close tag
+    use {
+        'alvan/vim-closetag'
+    }
 
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
