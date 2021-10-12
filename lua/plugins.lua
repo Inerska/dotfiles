@@ -49,12 +49,12 @@ vim.g.mapleader = "<Space>"
 vim.cmd 'set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab'
 vim.cmd 'set termguicolors'
 vim.cmd 'set t_Co=256'
-vim.cmd 'colorscheme nightfox'
+vim.cmd 'colorscheme omni'
 return require('packer').startup(function()
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
 
-    use 'EdenEast/nightfox.nvim'
+    use 'yonlu/omni.vim'
     --Telescope
     use 
     {
@@ -211,7 +211,15 @@ return require('packer').startup(function()
             require("plugin.config.nvim_tree")
         end
     }
-
+    
+    -- Comment
+    use {
+        "terrortylor/nvim-comment",
+        config = function()
+            require('nvim_comment').setup({line_mapping = "gF", operator_mapping = "gFF"})
+        end        
+    }
+    
     -- Auto close tag
     use {
         'alvan/vim-closetag'
