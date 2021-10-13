@@ -160,7 +160,7 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-nvim-lua", "cmp-nvim-lsp", "cmp-path", "cmp-buffer", "cmp_luasnip" },
+    after = { "cmp-nvim-lsp", "cmp-buffer", "cmp_luasnip", "cmp-path", "cmp-nvim-lua" },
     config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.cmp\frequire\0" },
     loaded = false,
     needs_bufread = false,
@@ -170,6 +170,10 @@ _G.packer_plugins = {
     config = { "\27LJ\2\2f\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\17line_mapping\agF\21operator_mapping\bgFF\nsetup\17nvim_comment\frequire\0" },
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-comment"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,

@@ -215,7 +215,7 @@ return require('packer').startup(function()
             require("plugin.config.nvim_tree")
         end
     }
-    
+
     -- Comment
     use {
         "terrortylor/nvim-comment",
@@ -223,11 +223,13 @@ return require('packer').startup(function()
             require('nvim_comment').setup({line_mapping = "gF", operator_mapping = "gFF"})
         end        
     }
-    
+
     -- Auto close tag
     use {
         'alvan/vim-closetag'
     }
+
+    use 'kosayoda/nvim-lightbulb'
 
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
