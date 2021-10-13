@@ -155,20 +155,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nightfox.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-nvim-lsp", "cmp_luasnip", "cmp-nvim-lua", "cmp-path", "cmp-buffer" },
+    after = { "cmp-nvim-lua", "cmp-nvim-lsp", "cmp-path", "cmp-buffer", "cmp_luasnip" },
     config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.cmp\frequire\0" },
     loaded = false,
     needs_bufread = false,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/nvim-cmp"
+  },
+  ["nvim-comment"] = {
+    config = { "\27LJ\2\2f\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\17line_mapping\agF\21operator_mapping\bgFF\nsetup\17nvim_comment\frequire\0" },
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -187,12 +188,17 @@ _G.packer_plugins = {
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
+    config = { "\27LJ\2\0028\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\29plugin.config.treesitter\frequire\0" },
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["omni.vim"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/omni.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -226,30 +232,38 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: dashboard-nvim
-time([[Config for dashboard-nvim]], true)
-try_loadstring("\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.dashboard\frequire\0", "config", "dashboard-nvim")
-time([[Config for dashboard-nvim]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-try_loadstring("\27LJ\2\0024\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\25plugin.config.feline\frequire\0", "config", "feline.nvim")
-time([[Config for feline.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.lsp\frequire\0", "config", "nvim-lspconfig")
-time([[Config for nvim-lspconfig]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-try_loadstring("\27LJ\2\0025\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\26plugin.config.luasnip\frequire\0", "config", "LuaSnip")
-time([[Config for LuaSnip]], false)
 -- Config for: better-escape.vim
 time([[Config for better-escape.vim]], true)
 try_loadstring("\27LJ\2\2;\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0 plugin.config.better_escape\frequire\0", "config", "better-escape.vim")
 time([[Config for better-escape.vim]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.dashboard\frequire\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+try_loadstring("\27LJ\2\2f\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\2\17line_mapping\agF\21operator_mapping\bgFF\nsetup\17nvim_comment\frequire\0", "config", "nvim-comment")
+time([[Config for nvim-comment]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.lsp\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+try_loadstring("\27LJ\2\0025\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\26plugin.config.luasnip\frequire\0", "config", "LuaSnip")
+time([[Config for LuaSnip]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\0028\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\29plugin.config.treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+try_loadstring("\27LJ\2\0024\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\25plugin.config.feline\frequire\0", "config", "feline.nvim")
+time([[Config for feline.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd lsp_signature.nvim ]]

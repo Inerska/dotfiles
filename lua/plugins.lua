@@ -175,7 +175,11 @@ return require('packer').startup(function()
     -- TreeSitter
     use
     {
-        "nvim-treesitter/nvim-treesitter"
+        "nvim-treesitter/nvim-treesitter",
+
+        config = function()
+            require('plugin.config.treesitter')
+        end
     }
 
     -- Feline
