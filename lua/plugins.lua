@@ -233,6 +233,9 @@ return require('packer').startup(function()
 
     use 'Groctel/jobsplit.vim'
 
+    -- LspSaga
+    use { 'tami5/lspsaga.nvim' }
+
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gh", "<cmd>Spotify prev<CR>", { noremap = true, silent = true })

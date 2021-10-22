@@ -144,6 +144,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/friendly-snippets"
   },
+  ["jobsplit.vim"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/jobsplit.vim"
+  },
   ["lsp_signature.nvim"] = {
     config = { "\27LJ\2\2…\2\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\1B\0\2\1K\0\1\0\17handler_opts\1\0\1\vborder\vsingle\1\0\f\tbind\2\ffix_pos\2\16hint_prefix\tïŸ» \20floating_window\2\14doc_lines\3\2\14max_width\3x\16hint_enable\2\fpadding\5\vzindex\3È\1\15max_height\3\22\17hi_parameter\vSearch\16hint_scheme\vString\nsetup\18lsp_signature\frequire\0" },
     load_after = {},
@@ -155,15 +159,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-cmp"] = {
-    after = { "cmp-nvim-lsp", "cmp-buffer", "cmp_luasnip", "cmp-path", "cmp-nvim-lua" },
+    after = { "cmp-nvim-lsp", "cmp-nvim-lua", "cmp_luasnip", "cmp-path", "cmp-buffer" },
     config = { "\27LJ\2\0021\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\22plugin.config.cmp\frequire\0" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/nvim-cmp"
   },
   ["nvim-comment"] = {
@@ -189,6 +198,7 @@ _G.packer_plugins = {
     config = { "\27LJ\2\0027\0\0\2\0\2\0\0046\0\0\0'\1\1\0B\0\2\1K\0\1\0\28plugin.config.nvim_tree\frequire\0" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/alexischangridel/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
