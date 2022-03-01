@@ -35,8 +35,7 @@ local on_attach = function(client, bufnr)
 
     -- Mappings.
     local opts = { noremap = true, silent = true }
-    --buf_set_keymap("n", "gL", "<cmd>lua require[[telescope.builtin]].lsp_code_actions{}<CR>", opts)
-    buf_set_keymap("n", "gL", "<cmd>Lspsaga code_action<cr>", opts)
+    buf_set_keymap("n", "gL", "<cmd>lua require[[telescope.builtin]].lsp_code_actions{}<CR>", opts)
     buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     buf_set_keymap("n", "gd", "<cmd>lua require[[telescope.builtin]].lsp_definitions{}<CR>", opts)
     buf_set_keymap("n", "gr", "<cmd>lua require[[telescope.builtin]].lsp_references{}<CR>", opts)
@@ -66,9 +65,6 @@ local on_attach = function(client, bufnr)
 
     -- Set autocommands conditional on server_capabilities
     if client.resolved_capabilities.document_highlight then
-        vim.cmd([[hi LspReferenceRead cterm=bold ctermbg=red guibg=#1b1b1b]] )--.. colors.dark3)
-        vim.cmd([[hi LspReferenceText cterm=bold ctermbg=red guibg=#1b1b1b]] )--.. colors.dark3)
-        vim.cmd([[hi LspReferenceWrite cterm=bold ctermbg=red guibg=#1b1b1b]] )-- .. colors.dark3)
         vim.cmd(
         [[
         augroup lsp_document_highlight

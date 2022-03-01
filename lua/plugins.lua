@@ -49,12 +49,10 @@ vim.g.mapleader = "<Space>"
 vim.cmd 'set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab'
 vim.cmd 'set termguicolors'
 vim.cmd 'set t_Co=256'
-vim.cmd 'colorscheme omni'
+vim.cmd 'colorscheme kanagawa'
 return require('packer').startup(function()
     -- Packer can manage itself
     use "wbthomason/packer.nvim"
-
-    use 'yonlu/omni.vim'
     --Telescope
     use 
     {
@@ -148,6 +146,8 @@ return require('packer').startup(function()
         "windwp/nvim-autopairs",
     }
 
+    use "rebelot/kanagawa.nvim"
+
     use({ "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" })
     use({ "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" })
     use { 
@@ -230,11 +230,6 @@ return require('packer').startup(function()
     }
 
     use 'kosayoda/nvim-lightbulb'
-
-    use 'Groctel/jobsplit.vim'
-
-    -- LspSaga
-    use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
 
     vim.api.nvim_set_keymap("n", "gk", "<cmd>Spotify play/pause<CR>", { noremap = true, silent = true })
     vim.api.nvim_set_keymap("n", "gl", "<cmd>Spotify next<CR>", { noremap = true, silent = true })
