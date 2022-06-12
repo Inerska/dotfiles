@@ -147,14 +147,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for fidget.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
 time([[Config for fidget.nvim]], false)
--- Config for: coq_nvim
-time([[Config for coq_nvim]], true)
-try_loadstring("\27LJ\2\nõ\1\0\0\a\0\f\0\0276\0\0\0'\2\1\0B\0\2\0016\0\2\0009\0\3\0009\1\4\0'\3\5\0B\1\2\2'\2\6\0&\1\2\0019\2\a\0009\4\b\0\18\6\1\0B\4\2\0A\2\0\2)\3\0\0\1\3\2\0X\2\4€6\2\2\0009\2\t\2'\4\n\0B\2\2\0016\2\2\0009\2\t\2'\4\v\0B\2\2\1K\0\1\0\14COQnow -s\fCOQdeps\bcmd\tglob\nemptyE/site/pack/packer/start/coq_nvim/.vars/runtime/requirements.lock\tdata\fstdpath\afn\bvim\bcoq\frequire\0", "config", "coq_nvim")
-time([[Config for coq_nvim]], false)
 -- Config for: kanagawa.nvim
 time([[Config for kanagawa.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\0", "config", "kanagawa.nvim")
 time([[Config for kanagawa.nvim]], false)
+-- Config for: coq_nvim
+time([[Config for coq_nvim]], true)
+try_loadstring("\27LJ\2\nõ\1\0\0\a\0\f\0\0276\0\0\0'\2\1\0B\0\2\0016\0\2\0009\0\3\0009\1\4\0'\3\5\0B\1\2\2'\2\6\0&\1\2\0019\2\a\0009\4\b\0\18\6\1\0B\4\2\0A\2\0\2)\3\0\0\1\3\2\0X\2\4€6\2\2\0009\2\t\2'\4\n\0B\2\2\0016\2\2\0009\2\t\2'\4\v\0B\2\2\1K\0\1\0\14COQnow -s\fCOQdeps\bcmd\tglob\nemptyE/site/pack/packer/start/coq_nvim/.vars/runtime/requirements.lock\tdata\fstdpath\afn\bvim\bcoq\frequire\0", "config", "coq_nvim")
+time([[Config for coq_nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

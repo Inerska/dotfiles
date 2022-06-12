@@ -71,6 +71,9 @@ vim.api.nvim_set_keymap("n", "gt", "<cmd>lua require('telescope.builtin').help_t
 vim.api.nvim_set_keymap("n", "gm", "<cmd>lua require'test'.printHello()<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gs", "<cmd>:PackerSync<cr>", { noremap = true, silent = true })
 
+-- jk to exit insert mode
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
+
 -- copilot
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', {silent=true, expr=true})
